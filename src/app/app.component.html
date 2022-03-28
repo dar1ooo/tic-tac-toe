@@ -1,0 +1,21 @@
+<div class="header-text">
+  <h1>{{ headerMessage }}</h1>
+  <h4>{{ AiEnabled ? "AI Enabled" : "AI Disabled" }}</h4>
+</div>
+<div class="game-board">
+  <a
+    class="box"
+    *ngFor="let square of board.Squares; let i = index"
+    (click)="SquareClicked(i)"
+  >
+    {{ square.content }}
+  </a>
+</div>
+<div class="options">
+  <button (click)="SetAi()" class="button-9" role="button">
+    {{ AiEnabled ? "Disable AI" : "Enable AI" }}
+  </button>
+  <button (click)="ResetBoard()" class="button-9" role="button">
+    Reset Board
+  </button>
+</div>
