@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   public isPlayerOneTurn = true;
   public headerMessage = '';
   public PlayerWon = false;
-  public AiEnabled = true;
+  public AiEnabled = false;
   public AiPlayed = false;
 
   ngOnInit(): void {
@@ -63,7 +63,7 @@ export class AppComponent implements OnInit {
         if (this.AiEnabled && !this.AiPlayed) {
           let squareIsEmpty = false;
           do {
-            let chosenSquare = Math.floor(Math.random() * 10);
+            let chosenSquare = Math.floor(Math.random() * 9);
             squareIsEmpty = this.board.Squares[chosenSquare].content === '';
             if (squareIsEmpty) {
               this.AiPlayed = true;
