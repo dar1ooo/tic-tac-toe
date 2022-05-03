@@ -1,18 +1,19 @@
 .game-board {
-  width: 600px;
-  height: 600px;
+  width: 80vh;
+  height: 80vh;
+  max-width: 80vw;
+  max-height: 80vw;
   margin: 0 auto;
   background-color: #34495e;
   color: #fff;
-  border: 6px solid #2c3e50;
+  border: 3px solid #2c3e50;
   border-radius: 10px;
-
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
 .box {
-  border: 6px solid #2c3e50;
+  border: 3px solid #2c3e50;
   border-radius: 2px;
   font-family: Helvetica;
   font-weight: bold;
@@ -68,4 +69,7 @@
 
 .header-text{
     text-align: center;
+    h1, h4{
+      margin: 0px 0px 20px 0px;
+    }
 }
